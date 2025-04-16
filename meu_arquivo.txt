@@ -1,1 +1,25 @@
-Conteúdo do meu arquivo
+import re  # Módulo 're' que fornece operações com expressões regulares.
+
+# Função chamada 'validate_numero_telefone' que aceita um argumento 'phone_number':
+def validate_numero_telefone(phone_number):
+
+    # Define o padrão de expressão regular para validar o formato (XX) 9XXXX-XXXX:
+    pattern = r"^\(\d{2}\) 9\d{4}-\d{4}$"
+
+    # Verifica se o padrão corresponde ao número de telefone fornecido
+    if re.match(pattern, phone_number):
+        # Retorna que o número é válido
+        return "Número de telefone válido."
+    else:
+        # Retorna que o número é inválido
+        return "Número de telefone inválido."
+
+# Solicita ao usuário que insira um número de telefone
+phone_number = input()
+
+# Chama a função e armazena o resultado
+result = validate_numero_telefone(phone_number)
+
+# Imprime o resultado
+print(result)
+
