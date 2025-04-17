@@ -16,7 +16,8 @@ def validate_numero_telefone(phone_number):
         return "Número de telefone inválido."
 
 # Solicita ao usuário que insira um número de telefone
-phone_number = input()
+#phone_number = input()
+phone_number = "(11) 91234-5678"  # Número de telefone válido
 
 # Chama a função e armazena o resultado
 result = validate_numero_telefone(phone_number)
